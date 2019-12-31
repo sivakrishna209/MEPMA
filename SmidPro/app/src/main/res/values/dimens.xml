@@ -1,0 +1,37 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+
+    <dimen name="margin_gap">4dp</dimen>
+    <dimen name="margin_gap_small">2dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_std">16dp</dimen>
+    <dimen name="margin_lg">32dp</dimen>
+    <dimen name="margin_elg">64dp</dimen>
+    <dimen name="row_padding_vertical">8dp</dimen>
+    <dimen name="row_padding_vertical_lg">32dp</dimen>
+
+    <dimen name="textsize_largeCaption">27sp</dimen>
+    <dimen name="textsize_large">24sp</dimen>
+    <dimen name="textsize_screenTitle">21sp</dimen>
+    <dimen name="textsize_regular">17sp</dimen>
+    <dimen name="textsize_small">13sp</dimen>
+    <dimen name="navBarHeight">48dp</dimen>
+
+    <dimen name="btn_ht_std">60dp</dimen>
+    <dimen name="btn_ht_small">36dp</dimen>
+    <dimen name="btn_ht_medium">96dp</dimen>
+    <dimen name="btn_ht_bar">30dp</dimen>
+
+    <dimen name="bar_ht_std">60dp</dimen>
+
+
+    <dimen name="stageCircleDiameter">8dp</dimen>
+    <dimen name="stageLineWidth">40dp</dimen>
+    <dimen name="stageLineThickness">2dp</dimen>
+
+
+</resources>

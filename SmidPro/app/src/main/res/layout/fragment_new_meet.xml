@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_std"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navBarHeight">
+
+            <TextView
+                android:id="@+id/status_title"
+                android:text="@string/status_change_title"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.75"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/sp_status_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:layout_weight="0.25"
+                android:paddingVertical="@dimen/margin_std"
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/bg_newMeetingDate"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_std"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/meet_date_title"
+                    android:text="Do you want to change meeting date"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    android:layout_height="wrap_content"/>
+                <Spinner
+                    android:id="@+id/sp_meet_date_selection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:layout_weight="0.3"
+                    android:paddingVertical="@dimen/margin_std"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/bg_calenderField"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_small"
+                android:background="@color/white"
+                android:layout_height="@dimen/navBarHeight">
+                <EditText
+                    android:id="@+id/dateField"
+                    android:enabled="false"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0.7"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/white"
+                    android:text="Select date"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content" />
+                <ImageButton
+                    android:id="@+id/btn_selectDate"
+                    android:layout_weight="0.3"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/calendar_black"
+                    android:scaleType="fitEnd"
+                    android:background="@android:color/transparent"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/bg_meetDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_lg"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/etMeetDiscussion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:minLines="3"
+                android:maxLines="5"
+                android:scrollHorizontally="false"
+                android:scrollbars="vertical"
+                android:hint="Meeting Description"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/bg_attendance"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_std"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnTakeAttendance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:paddingBottom="@dimen/margin_std"
+                android:text="Take Attendance" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_std"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etAttendedCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:enabled="false"
+                    android:text="0"
+                    android:hint="Total Attended" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_lg"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/etLastMeetDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:minLines="3"
+                android:maxLines="5"
+                android:scrollHorizontally="false"
+                android:scrollbars="vertical"
+                android:hint="Last Meet Description"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/bg_capturePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_take_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_std"
+                android:layout_gravity="center"
+                android:text="Take Picture  "
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="@dimen/margin_std"
+                android:visibility="gone"
+                android:id="@+id/captured_image"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_submit_meet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_lg"
+            android:layout_marginBottom="@dimen/margin_elg"
+            android:layout_gravity="center"
+            android:text=" Submit  "
+            />
+
+
+    </LinearLayout>
+</ScrollView>

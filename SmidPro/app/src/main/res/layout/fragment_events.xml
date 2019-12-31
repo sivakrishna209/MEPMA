@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Fragment.EventsFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/bar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_ht_std"
+        android:background="@android:color/transparent"
+        >
+
+        <ImageButton
+            android:id="@+id/btn_previous_year"
+            android:layout_width="@dimen/btn_ht_small"
+            android:layout_height="@dimen/btn_ht_small"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/doube_arrow_left"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="@dimen/margin_std"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_previous_month"
+            android:layout_width="@dimen/btn_ht_small"
+            android:layout_height="@dimen/btn_ht_small"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btn_previous_year"
+            android:src="@drawable/left_arrow"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="@dimen/margin_std"
+            />
+
+        <TextView
+            android:id="@+id/tv_focus_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Month"
+            android:layout_toRightOf="@id/btn_previous_month"
+            android:layout_toLeftOf="@id/btn_next_month"
+            android:layout_marginLeft="@dimen/margin_std"
+            android:layout_marginRight="@dimen/margin_std"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/textsize_regular"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_next_month"
+            android:layout_width="@dimen/btn_ht_small"
+            android:layout_height="@dimen/btn_ht_small"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/btn_next_year"
+            android:src="@drawable/right_arrow"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="@dimen/margin_std"
+
+            />
+
+        <ImageButton
+            android:id="@+id/btn_next_year"
+            android:layout_width="@dimen/btn_ht_small"
+            android:layout_height="@dimen/btn_ht_small"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/doube_arrow_right"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="@dimen/margin_std"
+
+            />
+
+    </RelativeLayout>
+
+
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/compactcalendar_view"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="@dimen/margin_std"
+        app:compactCalendarTargetHeight="300dp"
+        app:compactCalendarTextSize="12sp"
+        app:compactCalendarBackgroundColor="@color/lightGrey"
+        app:compactCalendarTextColor="@color/black"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="#E57373"
+        app:compactCalendarCurrentDayBackgroundColor="#B71C1C"
+        app:compactCalendarMultiEventIndicatorColor="#fff"
+        />
+    <Button
+        android:id="@+id/btn_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today"
+        android:layout_marginTop="@dimen/margin_std"
+        android:layout_gravity="center_horizontal"
+        />
+
+</LinearLayout>
