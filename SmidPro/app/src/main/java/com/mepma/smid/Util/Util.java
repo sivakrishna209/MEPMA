@@ -110,10 +110,6 @@ public class Util {
     }
 
 
-
-
-
-
     public static boolean isNetworkAvaliable(Context ctx) {
         ConnectivityManager connectivityManager = (ConnectivityManager) ctx
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
